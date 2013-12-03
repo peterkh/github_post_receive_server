@@ -33,7 +33,7 @@ module GithubPostReceiveServer
 
       payload = JSON.parse(payload)
 
-      # ... Your code goes here! ...
+      system('r10k deploy environment -p')
 
       @res.write THANK_YOU_COMMENT
     end
